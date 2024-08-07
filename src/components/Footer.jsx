@@ -1,6 +1,10 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function Footer() {
+    // Get the current year
+  const currentYear = new Date().getFullYear();
+
   return (
     <div>
                   <section className="w3l-footer-29-main">
@@ -9,9 +13,11 @@ function Footer() {
                         <div className="row footer-top-29">
                             <div className="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-1 pr-lg-5">
                                 <h6 className="footer-title-29">Contact Info </h6>
-                                <p>Address : Study course, 343 marketing, #2214 cravel street, NY - 62617.</p>
-                                <p className="my-2">Phone : <a href="tel:+1(21) 234 4567">+1(21) 234 4567</a></p>
-                                <p>Email : <a href="mailto:info@example.com">info@example.com</a></p>
+                                <p>Address : C/o.Vishram Marathe House, 1st Flor, Gate No. 1626,
+                                    Behind Axis Bank, Near Gajanan Mangal Karyalaya,
+                                    Shikrapur, Tal. Shirur, Dist. Pune, 412 208, Maharashtra, India..</p>
+                                <p className="my-2">Phone : <a href="tel:+1(21) 234 4567">+91 9823112846, 9359941473</a></p>
+                                <p>Email : <a href="mailto:sktechnoproject@gmail.com">sktechnoproject@gmail.com</a></p>
                                 <div className="main-social-footer-29 mt-4">
                                     <a href="#facebook" className="facebook"><span className="fa fa-facebook"></span></a>
                                     <a href="#twitter" className="twitter"><span className="fa fa-twitter"></span></a>
@@ -23,34 +29,28 @@ function Footer() {
 
                                 <ul>
                                     <h6 className="footer-title-29">Company</h6>
-                                    <li><a href="about.html">About company</a></li>
-                                    <li><a href="#blog"> Latest Blog posts</a></li>
-                                    <li><a href="#teacher"> Became a teacher </a></li>
-                                    <li><a href="courses.html">Online Courses</a></li>
-                                    <li><a href="contact.html">Get in touch</a></li>
+                                    <li><Link to="/about">About Us</Link></li>
+                                    <li><Link to="/contact">Contact Us</Link></li>
+                                    <li><Link to="/services">Services</Link></li>
                                 </ul>
                             </div>
                             <div className="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-3 mt-lg-0 mt-5">
-                                <h6 className="footer-title-29">Programs</h6>
+                                <h6 className="footer-title-29">Projects</h6>
                                 <ul>
-                                    <li><a href="#traning">Training Center</a></li>
-                                    <li><a href="#documentation">Documentation</a></li>
-                                    <li><a href="#release">Release Status</a></li>
                                     <li><a href="#customers"> Customers</a></li>
                                     <li><a href="#helpcenter"> Help Center</a></li>
                                 </ul>
-
                             </div>
-                            <div className="col-lg-3 col-md-6 col-sm-7 footer-list-29 footer-4 mt-lg-0 mt-5">
+                            {/* <div className="col-lg-3 col-md-6 col-sm-7 footer-list-29 footer-4 mt-lg-0 mt-5">
                                 <h6 className="footer-title-29">Suppport</h6>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
                 {/* copyright */}
                 <section className="w3l-copyright text-center">
                     <div className="container">
-                        <p className="copy-footer-29">© 2024 Study Course. All rights reserved. Design by <strong>Ajinkya Katre &hearts;</strong></p>
+                        <p className="copy-footer-29">© {currentYear} <strong>SKTECHNOPROJECTS </strong>. All rights reserved. Design by <strong>Ajinkya Katre &hearts;</strong></p>
                     </div>
 
                     {/* move top */}

@@ -1,15 +1,17 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function Header() {
-  return (
-    <div>
-      <header id="site-header" className="fixed-top">
+    return (
+        <div>
+            <header id="site-header" className="fixed-top">
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-dark stroke">
-                        <h1>
-                            <a className="navbar-brand" href="index.html">
-                                <span className="fa fa-diamond"></span>Study Course <span className="logo">Journey to success</span></a>
-                        </h1>
+                        <div className='flex justify-center items-center'>
+                            <img className='vertical align-baseline' src="assets/images/sklogo.png" alt="logo image" height={60} width={100}    />
+                            <a className="navbar-brand" href="/">
+                            SKTECHNOPROJECTS <span className='logo pl-0'>Innovation in Construction, Excellence in Delivery</span></a>
+                        </div>
 
                         {/*if logo is image enable this   
         <a className="navbar-brand" href="#index.html">
@@ -24,60 +26,42 @@ function Header() {
 
                         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                             <ul className="navbar-nav mx-lg-auto">
-                                <li className="nav-item active">
-                                    <a className="nav-link" href="index.html">Home <span className="sr-only">(current)</span></a>
+                                <li className="nav-item">
+                                    <NavLink
+                                        to="/"
+                                        className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+                                        Home
+                                    </NavLink>
                                 </li>
-                                <li className="nav-item @@about__active">
-                                    <a className="nav-link" href="about.html">About</a>
+                                <li className="nav-item">
+                                    <NavLink
+                                        to="/about"
+                                        className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+                                        About
+                                    </NavLink>
                                 </li>
-                                <li className="nav-item @@courses__active">
-                                    <a className="nav-link" href="courses.html">Courses</a>
+                                <li className="nav-item">
+                                    <NavLink
+                                        to="/courses"
+                                        className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+                                        Projects
+                                    </NavLink>
                                 </li>
-                                <li className="nav-item @@contact__active">
-                                    <a className="nav-link" href="contact.html">Contact</a>
+                                <li className="nav-item">
+                                    <NavLink
+                                        to="/contact"
+                                        className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+                                        Contact
+                                    </NavLink>
                                 </li>
                             </ul>
 
-                            <div className="search-right">
-                                <a href="#search" title="search"><span className="fa fa-search" aria-hidden="true"></span></a>
-                                {/*search popup */}
-                                <div id="search" className="pop-overlay">
-                                    <div className="popup">
-
-                                        <form action="error.html" method="GET" className="search-box">
-                                            <input type="search" placeholder="Search" name="search" required="required" />
-                                            <button type="submit" className="btn"><span className="fa fa-search" aria-hidden="true"></span></button>
-                                        </form>
-
-                                    </div>
-                                    <a className="close" href="#close">×</a>
-                                </div>
-                                {/*/search popup */}
-                            </div>
-                            <div className="top-quote mr-lg-2 text-center">
-                                <a href="#login" className="btn login mr-2"><span className="fa fa-user"></span> login</a>
-                            </div>
                         </div>
-                        {/*toggle switch for light and dark theme */}
-                        <div className="mobile-position">
-                            <nav className="navigation">
-                                <div className="theme-switch-wrapper">
-                                    <label className="theme-switch">
-                                        <input type="checkbox" id="checkbox" />
-                                        <div className="mode-container py-1">
-                                            <i className="gg-sun"></i>
-                                            <i className="gg-moon"></i>
-                                        </div>
-                                    </label>
-                                </div>
-                            </nav>
-                        </div>
-                        {/*//toggle switch for light and dark theme */}
                     </nav>
                 </div>
             </header>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Header
