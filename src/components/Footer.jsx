@@ -15,7 +15,7 @@ function Footer() {
                                 <h6 className="footer-title-29">Contact Info </h6>
                                 <p>Address : C/o.Vishram Marathe House, 1st Flor, Gate No. 1626,
                                     Behind Axis Bank, Near Gajanan Mangal Karyalaya,
-                                    Shikrapur, Tal. Shirur, Dist. Pune, 412 208, Maharashtra, India..</p>
+                                    Shikrapur, Tal. Shirur, Dist. Pune, 412 208, Maharashtra, India.</p>
                                 <p className="my-2">Phone : <a href="tel:+1(21) 234 4567">+91 9823112846, 9359941473</a></p>
                                 <p>Email : <a href="mailto:sktechnoproject@gmail.com">sktechnoproject@gmail.com</a></p>
                                 <div className="main-social-footer-29 mt-4">
