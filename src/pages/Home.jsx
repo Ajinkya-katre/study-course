@@ -5,7 +5,6 @@ import Header from '../components/Header'
 function Home() {
     return (
         <div>
-            <Header />
 
             {/* main-slider */}
             <section className="w3l-main-slider" id="home">
@@ -709,8 +708,6 @@ function Home() {
                     </div>
                 </div>
             </section>
-
-            <Footer />
 
         </div >
     )

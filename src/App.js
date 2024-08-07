@@ -1,22 +1,29 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// App.js
 
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Courses from './pages/Courses';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// Import your components here
+import Layout from './components/Layout';
 import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact'
+// import NotFound from '../pages/NotFound';
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/courses" element={<Courses />} />
-      </Routes>
-    </BrowserRouter>
-  )
+    <Router>
+        <Layout>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                {/* <Route path="*" element={<NotFoundPage />} /> */}
+            </Routes>
+        </Layout>
+    </Router>
+  );
 }
 
-export default App
+export default App;
